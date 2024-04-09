@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani's Online Food Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">
+                <img class="foodlogo" src="foodlogo.png" alt="Logo">
+                <p class="slogan"><b>DANI'S FOOD CART</b></p>
+            </div>
+            <header class="header">
+                <h2>Order Form</h2>
+                <h3><i>Fill your cart with flavors. Deliciousness Delivered!</i></h3>
+            </header>
+            <form action="#" method="POST">
+                <div class="form-section">
+                    <div class="input-container">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="0" max="100" placeholder="Enter your age">
+                    </div>
+
+                <div id="dropdown">
+                    <button class="dropdown-toggle">
+                        <span>Menu</span>
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="#">Italian</a></li>
+                        <li class="menu-item"><a href="#">Chinese</a></li>
+                        <li class="menu-item dropdown">
+                            <a href="#" class="submenu-toggle">
+                                <span>Healthy Options</span>
+                                <i class="fas fa-caret-right"></i>
+                            </a>
+                            <!-- Submenu for Healthy Options -->
+                            <ul class="submenu submenu-healthy-options">
+                                <li class="submenu-item"><a href="#">Vegetarian</a></li>
+                                <li class="submenu-item"><a href="#">Vegan</a></li>
+                                <li class="submenu-item"><a href="#">Gluten-Free</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#">Mexican</a></li>
+                        <li class="menu-item dropdown">
+                            <a href="#" class="submenu-toggle">
+                                <span>Drinks</span>
+                                <i class="fas fa-caret-right"></i>
+                            </a>
+                            <!-- Submenu for Specials -->
+                            <ul class="submenu submenu-specials">
+                                <li class="submenu-item"><a href="#">Coffee</a></li>
+                                <li class="submenu-item"><a href="#">Juice</a></li>
+                                <li class="submenu-item"><a href="#">Tea</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                
+                <div class="form-section">
+                    <h3>Mode of Payment</h3>
+                    <div class="form-field mode-of-payment">
+                        <label for="cash"><input type="radio" id="cash" name="payment" value="Cash" required> Cash On Delivery </label>
+                        <label for="credit-debit"><input type="radio" id="credit-debit" name="payment" value="Credit/Debit" required> Pay Online</label>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Dine-in / Take-out</h3>
+                    <div class="form-field dine-in-take-out" aria-label="Select Dine-in or Take-out">
+                        <label for="dine-in"><input type="radio" id="dine-in" name="dine-takeout" value="Dine-in" required> Dine-in</label>
+                        <label for="take-out"><input type="radio" id="take-out" name="dine-takeout" value="Take-out" required> Take-out</label>
+                    </div>
+                </div>
+                
+                <div class="comments-instructions">
+                    <div class="form-field comments-field">
+                        <label for="comments">Comments/Instruction (Optional):</label>
+                        <textarea id="comments" name="comments" class="comments-textarea" style="resize: none;"></textarea>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="order-button">Place Order</button>                      
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div> 
+            </form>        
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
